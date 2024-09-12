@@ -32,7 +32,7 @@ export default function Layout({ children }) {
                   <Link href="/home">
                     <span
                       className={`${
-                        currentPath === '/home' ? 'text-indigo-600' : 'text-indigo-400'
+                        currentPath === '/home' ? 'bg-indigo-600 text-white' : 'text-indigo-400'
                       } hover:bg-indigo-700 px-3 py-2 rounded-md text-lg font-medium`}
                     >
                       Home
@@ -43,7 +43,7 @@ export default function Layout({ children }) {
                   <Link href="/ai">
                     <span
                       className={`${
-                        currentPath === '/ai' ? 'text-indigo-600' : 'text-indigo-400'
+                        currentPath === '/ai' ? 'bg-indigo-600 text-white' : 'text-indigo-400'
                       } hover:bg-indigo-700 px-3 py-2 rounded-md text-lg font-medium`}
                     >
                       AI
@@ -54,7 +54,7 @@ export default function Layout({ children }) {
                   <Link href="/photography">
                     <span
                       className={`${
-                        currentPath === '/photography' ? 'text-indigo-600' : 'text-indigo-400'
+                        currentPath === '/photography' ? 'bg-indigo-600 text-white' : 'text-indigo-400'
                       } hover:bg-indigo-700 px-3 py-2 rounded-md text-lg font-medium`}
                     >
                       Photography
@@ -65,7 +65,7 @@ export default function Layout({ children }) {
                   <Link href="/about">
                     <span
                       className={`${
-                        currentPath === '/about' ? 'text-indigo-600' : 'text-indigo-400'
+                        currentPath === '/about' ? 'bg-indigo-600 text-white' : 'text-indigo-400'
                       } hover:bg-indigo-700 px-3 py-2 rounded-md text-lg font-medium`}
                     >
                       About
@@ -76,7 +76,7 @@ export default function Layout({ children }) {
                   <Link href="/contact">
                     <span
                       className={`${
-                        currentPath === '/contact' ? 'text-indigo-600' : 'text-indigo-400'
+                        currentPath === '/contact' ? 'bg-indigo-600 text-white' : 'text-indigo-400'
                       } hover:bg-indigo-700 px-3 py-2 rounded-md text-lg font-medium`}
                     >
                       Contact
