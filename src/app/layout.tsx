@@ -19,11 +19,11 @@ export default function Layout({ children }) {
               <div className="p-6 sm:p-10">
                 <div className="flex flex-col sm:flex-row items-center mb-8">
                   <Image
-                    src="/api/placeholder/96/96?text=YourPhoto"
-                    className="h-24 w-24 rounded-full object-cover border-4 border-indigo-500 mb-4 sm:mb-0"
-                    height={24}
-                    width={24}
-                    alt="Profile"
+                    src="/images/profile.jpg"
+                    className="h-24 w-24 rounded-full object-cover border-4 border-gray-500 mb-4 sm:mb-0"
+                    height={150}
+                    width={150}
+                    alt="Profile Pic"
                   />
                   <div className="sm:ml-5 text-center sm:text-left">
                     <div className="text-2xl font-bold text-white">Turhan Kimbrough</div>
