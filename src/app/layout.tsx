@@ -31,7 +31,7 @@ export default function Layout({ children }) {
                   </div>
                 </div>
                 <nav className="mb-8">
-                  <ul className="flex flex-wrap justify-center sm:justify-start space-x-2 sm:space-x-4">
+                  <ul className="grid grid-cols-2 gap-4 sm:flex sm:flex-row sm:space-x-4">
                     <li>
                       <Link href="/home">
                         <span
