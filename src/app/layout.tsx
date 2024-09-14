@@ -26,7 +26,7 @@ export default function Layout({ children }) {
                     alt="Profile"
                   />
                   <div className="sm:ml-5 text-center sm:text-left">
-                    <div className="text-2xl font-bold text-white">Your Name</div>
+                    <div className="text-2xl font-bold text-white">Turhan Kimbrough</div>
                     <p className="text-xl text-gray-300">AI Enthusiast & Photographer</p>
                   </div>
                 </div>
@@ -59,16 +59,6 @@ export default function Layout({ children }) {
                             } hover:bg-indigo-700 px-3 py-2 rounded-md text-lg font-medium`}
                         >
                           Photography
-                        </span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/about">
-                        <span
-                          className={`${currentPath === '/about' ? 'bg-indigo-600 text-white' : 'text-indigo-400'
-                            } hover:bg-indigo-700 px-3 py-2 rounded-md text-lg font-medium`}
-                        >
-                          About
                         </span>
                       </Link>
                     </li>
