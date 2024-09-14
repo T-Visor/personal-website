@@ -12,7 +12,7 @@ const HomePage = () => (
                 <ul className="list-disc list-inside text-lg space-y-2">
                     <li>Image Recognition</li>
                     <li>Natural Language Processing</li>
-                    <li>Research</li>
+                    <li>Generative AI</li>
                 </ul>
             </div>
             <div className="bg-gray-700 p-4 rounded-lg">
