@@ -7,7 +7,7 @@ const ContactPage = () => (
         
         {/* Centering and adjusting the width for desktop */}
         <div className="flex justify-left">
-            <div className="w-full sm:w-2/3 lg:w-2/3">
+            <div className="w-full sm:w-1/2 lg:w-1/2">
                 <Alert>
                     <AlertDescription>
                         <div className="text-lg space-y-2">
