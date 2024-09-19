@@ -47,8 +47,13 @@ const PhotographyPage = () => {
                 <div
                     ref={fullScreenRef}
                     className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
-                    onClick={closeFullScreen}
                 >
+                    <button
+                        className="absolute top-4 right-4 p-2 bg-indigo-600 text-white rounded-lg z-60"
+                        onClick={closeFullScreen}
+                    >
+                        Close
+                    </button>
                     <Image
                         src={fullScreenImage}
                         alt="Full-screen photography"
