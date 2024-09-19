@@ -12,7 +12,7 @@ export default function Layout({ children }) {
 
   return (
     <html lang="en">
-      <body className="min-h-screen bg-gray-900 text-white overflow-auto">  {/* Changed to overflow-auto */}
+      <body className="min-h-screen bg-gray-900 text-white overflow-auto"> 
         <div className="py-8 px-4 sm:py-16 sm:px-6 lg:px-8">
           <div className="w-full max-w-4xl mx-auto sm:transform sm:scale-110 sm:origin-top">
             <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
