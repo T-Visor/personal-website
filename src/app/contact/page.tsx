@@ -1,5 +1,6 @@
 'use client'
 import { Alert, AlertDescription } from "@/components/ui/alert"
+import { Bold } from "lucide-react";
 
 const ContactPage = () => (
     <div className="space-y-6">
@@ -11,10 +12,31 @@ const ContactPage = () => (
                 <Alert>
                     <AlertDescription>
                         <div className="text-lg space-y-2">
-                            <p>Email: contact@example.com</p>
-                            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourusername" className="text-blue-400 hover:underline">LinkedIn Profile</a></p>
-                            <p>GitHub: <a href="https://github.com/yourusername" className="text-blue-400 hover:underline">GitHub Profile</a></p>
-                            <p>Instagram: @yourphotography</p>
+                            <p><strong>Email: </strong>  
+                                <a href="mailto:turkimbro@gmail.com" target="_blank" className="text-blue-400 hover:underline">
+                                    turkimbro@gmail.com
+                                </a>
+                            </p>
+                            <p><strong>LinkedIn: </strong> 
+                                <a href="https://linkedin.com/in/turhan-kim" target="_blank" className="text-blue-400 hover:underline">
+                                    LinkedIn Profile
+                                </a>
+                            </p>
+                            <p><strong>IEEE: </strong> 
+                                <a href="https://ieeexplore.ieee.org/author/37089429839" target="_blank" className="text-blue-400 hover:underline">
+                                    IEEE Xplore Profile
+                                </a>
+                            </p>
+                            <p><strong>GitHub: </strong> 
+                                <a href="https://github.com/T-Visor" target="_blank" className="text-blue-400 hover:underline">
+                                    GitHub Profile
+                                </a>
+                            </p>
+                            <p><strong>EyeEm: </strong> 
+                                <a href="https://www.eyeem.com/u/turkimbro/photos" target="_blank" className="text-blue-400 hover:underline">
+                                    EyeEm Profile
+                                </a>
+                            </p>
                         </div>
                     </AlertDescription>
                 </Alert>
