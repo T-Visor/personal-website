@@ -9,7 +9,7 @@ type ContactEntry = {
     anchorText: string;
 }
 
-const contactListItems: ContactInfo[] = [
+const contactListItems: ContactEntry[] = [
     {
         id: 1,
         label: "Email:",
@@ -42,6 +42,15 @@ const contactListItems: ContactInfo[] = [
     },
 ]
 
+type ContactEntryProps = {
+    label: string;
+    rawURL: string;
+    anchorText: string;
+};
+
+//const SectionCard: React.FC<ContactEntryProps> = ({ label, rawURL, anchorText }) => (
+
+//);
 
 const ContactPage = () => (
     <div className="space-y-6">
