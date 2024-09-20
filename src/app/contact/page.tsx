@@ -2,6 +2,47 @@
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Bold } from "lucide-react";
 
+type ContactEntry = {
+    id: number;
+    label: string;
+    rawURL: string;
+    anchorText: string;
+}
+
+const contactListItems: ContactInfo[] = [
+    {
+        id: 1,
+        label: "Email:",
+        rawURL: "mailto:turkimbro@gmail.com",
+        anchorText: "turkimbro@gmail.com"
+    },
+    {
+        id: 2,
+        label: "LinkedIn:",
+        rawURL: "https://linkedin.com/in/turhan-kim",
+        anchorText: "LinkedIn Profile"
+    },
+    {
+        id: 3,
+        label: "IEEE:",
+        rawURL: "https://ieeexplore.ieee.org/author/37089429839",
+        anchorText: "IEEE Profile"
+    },
+    {
+        id: 4,
+        label: "GitHub:",
+        rawURL: "https://github.com/T-Visor",
+        anchorText: "GitHub Profile"
+    },
+    {
+        id: 5,
+        label: "EyeEm:",
+        rawURL: "https://www.eyeem.com/u/turkimbro/photos",
+        anchorText: "EyeEm Profile"
+    },
+]
+
+
 const ContactPage = () => (
     <div className="space-y-6">
         <h2 className="text-3xl font-bold">Contact Me</h2>
