@@ -1,4 +1,4 @@
-'use client'
+//'use client'
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Bold } from "lucide-react";
 
