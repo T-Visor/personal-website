@@ -50,7 +50,7 @@ type ContactListItemProps = {
 
 const SectionCard: React.FC<ContactListItemProps> = ({ label, rawURL, anchorText }) => (
     <p><strong>{label + ": "} </strong>
-        <a href={rawURL} target="_blank" className="text-blue-400 hover:underline">
+        <a href={rawURL} target="_blank" className="text-indigo-400 hover:underline">
             {anchorText}
         </a>
     </p>

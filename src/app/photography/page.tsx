@@ -49,11 +49,13 @@ const PhotographyPage = () => {
                     className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
                 >
                     <button
-                        className="absolute top-4 right-4 p-2 bg-indigo-600 text-white rounded-lg z-60"
+                        className="absolute top-4 right-4 p-2 text-white lg z-60"
                         onClick={closeFullScreen}
+                        aria-label="Close"
                     >
-                        Close
+                        <span className="text-xl">X</span> {/* Use an "X" character */}
                     </button>
+
                     <Image
                         src={fullScreenImage}
                         alt="Full-screen photography"
