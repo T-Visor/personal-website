@@ -38,7 +38,7 @@ const SectionCard: React.FC<SectionCardProps> = ({ title, items }) => (
 
 const HomePage: React.FC = () => (
     <div className="space-y-6">
-        <h2 className="text-3xl font-bold">Welcome to My Portfolio</h2>
+        <h2 className="text-3xl font-bold">Welcome To My Portfolio</h2>
         <p className="text-lg">
             I am thrilled by the incredible potential of generative AI, both today and in the future!
             The possibilities are endless, and I am excited to be part of this transformative journey!
