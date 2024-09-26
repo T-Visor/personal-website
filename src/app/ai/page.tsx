@@ -50,7 +50,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, url }) =>
   <div className="bg-gray-700 p-4 rounded-lg">
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="text-lg mb-2">{description}</p>
-    <a href={url} target="_blank" className="text-blue-400 hover:underline">Learn more</a>
+    {url && <a href={url} target="_blank" className="text-blue-400 hover:underline">Learn more</a>}
   </div>
 );
 
