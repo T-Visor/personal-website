@@ -7,7 +7,7 @@ type Section = {
 }
 
 const sections: Section[] = [
-    {
+ /*   {
         id: 1,
         title: "AI Highlights",
         items: ["Image Recognition", "Natural Language Processing", "Generative AI"]
@@ -17,7 +17,8 @@ const sections: Section[] = [
         title: "Photography Showcase",
         items: ["Travel", "Nature", "Cityscapes"]
     }
-]
+    */
+] 
 
 type SectionCardProps = {
     title: string;
