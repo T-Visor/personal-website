@@ -1,9 +1,10 @@
-import { headers } from 'next/headers';
+import { ReactNode } from 'react';
 import ClientLayout from '@/components/clientLayout';
 
-export default function Layout({ children }) {
-  const headersList = headers();
-  const pathname = headersList.get('x-invoke-path') || '';
+type LayoutProps = {
+  children: ReactNode;
+};
 
-  return <ClientLayout currentPath={pathname}>{children}</ClientLayout>;
+export default function Layout({ children }: LayoutProps) {
+  return <ClientLayout>{children}</ClientLayout>;
 }

@@ -1,12 +1,16 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, ReactNode } from 'react';
 import Image from 'next/image';
 import '@/app/globals.css';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default function ClientLayout({ children }) {
+type ClientLayoutProps = {
+  children: ReactNode; // Explicitly type the children prop
+};
+
+export default function ClientLayout({ children }: ClientLayoutProps) {
   const [currentPath, setCurrentPath] = useState('');
   const clientPathname = usePathname();
 
@@ -14,7 +18,7 @@ export default function ClientLayout({ children }) {
     setCurrentPath(clientPathname);
   }, [clientPathname]);
 
-  const isActive = (href) => {
+  const isActive = (href: string) => {
     if (href === '/') {
       return currentPath === href;
     }
