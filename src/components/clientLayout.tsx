@@ -42,7 +42,7 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
                   />
                   <div className="sm:ml-5 text-center sm:text-left">
                     <div className="text-2xl font-bold text-white">Turhan Kimbrough</div>
-                    <p className="text-xl text-gray-300">AI Enthusiast & Photographer</p>
+                    <p className="text-xl text-gray-300">AI Engineer & Photographer</p>
                   </div>
                 </div>
                 <nav className="mb-8">
