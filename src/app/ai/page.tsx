@@ -10,7 +10,7 @@ type Project = {
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "MissionChat",
+    title: "MissionChat (Proprietary)",
     description: "A large language model (LLM) capability satisfying multiple use-cases such as synthetic data generation, document generation for help desk support, and knowledge discovery engines.",
     url: ""
   },

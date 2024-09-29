@@ -16,7 +16,7 @@ type galleryImage = {
 const images: galleryImage[] = [
   {
     id: 1,
-    url: "cld-sample-5",
+    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727647259/bridge-view-min_lgvapr.jpg",
     height: 500,
     width: 500,
     fullscreenHeight: 700,
@@ -25,7 +25,7 @@ const images: galleryImage[] = [
   },
   {
     id: 2,
-    url: "cld-sample-2",
+    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/8FEFF362-BA95-4BBB-80C9-5CDC6DCC254D_mcqet9.jpg",
     height: 500,
     width: 500,
     fullscreenHeight: 700,
@@ -34,7 +34,7 @@ const images: galleryImage[] = [
   },
   {
     id: 3,
-    url: "cld-sample-3",
+    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/IMG_0781_bnry3a.jpg",
     height: 500,
     width: 500,
     fullscreenHeight: 700,
@@ -43,7 +43,25 @@ const images: galleryImage[] = [
   },
   {
     id: 4,
-    url: "cld-sample-4",
+    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646360/IMG_1148_yaegg8.jpg",
+    height: 500,
+    width: 500,
+    fullscreenHeight: 700,
+    fullscreenWidth: 700,
+    alt: "Image with sky in background."
+  },
+  {
+    id: 5,
+    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/cabin-view_qumj6w.jpg",
+    height: 500,
+    width: 500,
+    fullscreenHeight: 700,
+    fullscreenWidth: 700,
+    alt: "Image with sky in background."
+  },
+  {
+    id: 6,
+    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/C6015A3C-9653-4BEA-96C6-7E93327A9209_jitmqp.jpg",
     height: 500,
     width: 500,
     fullscreenHeight: 700,
@@ -72,7 +90,7 @@ const PhotographyPage = () => {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-3xl font-bold">Photography Gallery</h2>
+      <h2 className="text-3xl font-bold">Photo Gallery</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {images.map((image) => (
           <div
@@ -85,10 +103,8 @@ const PhotographyPage = () => {
               className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300"
               height={image.height}
               width={image.width}
-              crop={{
-                type: 'auto',
-                source: true
-              }}
+              crop="fill" // Set the crop type to 'fill'
+              gravity="center" // Ensures the crop is centered
               alt={image.alt}
             />
           </div>
