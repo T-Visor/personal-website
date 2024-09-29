@@ -1,6 +1,5 @@
 //'use client'
 import { Alert, AlertDescription } from "@/components/ui/alert"
-import { Bold } from "lucide-react";
 
 type ContactListItem = {
   id: number;
@@ -22,20 +21,14 @@ const contactListItems: ContactListItem[] = [
     rawURL: "https://linkedin.com/in/turhan-kim",
     anchorText: "LinkedIn Profile"
   },
-  /*{
-    id: 3,
-    label: "IEEE",
-    rawURL: "https://ieeexplore.ieee.org/author/37089429839",
-    anchorText: "IEEE Profile"
-  },*/
   {
-    id: 4,
+    id: 3,
     label: "GitHub",
     rawURL: "https://github.com/T-Visor",
     anchorText: "GitHub Profile"
   },
   {
-    id: 5,
+    id: 4,
     label: "EyeEm",
     rawURL: "https://www.eyeem.com/u/turkimbro/photos",
     anchorText: "EyeEm Profile"
@@ -66,6 +59,7 @@ const ContactPage: React.FC = () => (
             <div className="text-lg space-y-2">
               {contactListItems.map((contactListItem) =>
                 <SectionCard
+                  key={contactListItem.id}
                   label={contactListItem.label}
                   rawURL={contactListItem.rawURL}
                   anchorText={contactListItem.anchorText}
