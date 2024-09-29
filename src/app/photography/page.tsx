@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useRef } from 'react';
-import Image from 'next/image';
 import { CldImage } from 'next-cloudinary';
 
 type galleryImage = {
@@ -53,13 +52,12 @@ const images: galleryImage[] = [
   },
 ]
 
-
 const PhotographyPage = () => {
-  const [fullScreenImage, setFullScreenImage] = useState<string | null>(null);
+  const [fullScreenImage, setFullScreenImage] = useState<galleryImage | null>(null); // Store the full image object
   const fullScreenRef = useRef<HTMLDivElement | null>(null);
 
-  const handleImageClick = (src: string) => {
-    setFullScreenImage(src);
+  const handleImageClick = (image: galleryImage) => {
+    setFullScreenImage(image); // Set the full image object
     if (fullScreenRef.current && fullScreenRef.current.requestFullscreen) {
       fullScreenRef.current.requestFullscreen();
     }
@@ -78,8 +76,9 @@ const PhotographyPage = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {images.map((image) => (
           <div
+            key={image.id}  // Added key prop
             className="aspect-square overflow-hidden rounded-lg cursor-pointer"
-            onClick={() => handleImageClick(image.url)}
+            onClick={() => handleImageClick(image)}
           >
             <CldImage
               src={image.url}
@@ -94,21 +93,6 @@ const PhotographyPage = () => {
             />
           </div>
         ))}
-        {/*[1, 2, 3, 4, 5, 6].map((num) => (
-          <div
-            key={num}
-            className="aspect-square overflow-hidden rounded-lg cursor-pointer"
-            onClick={() => handleImageClick(`/images/profile.jpg`)}
-          >
-            <Image
-              src={`/images/profile.jpg`}
-              className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300"
-              height={400}
-              width={400}
-              alt={`Photography sample ${num}`}
-            />
-          </div>
-        ))*/}
       </div>
 
       {/* Fullscreen view */}
@@ -126,10 +110,10 @@ const PhotographyPage = () => {
           </button>
 
           <CldImage
-            src={fullScreenImage}
-            alt="Full-screen photography"
-            width={700}
-            height={700}
+            src={fullScreenImage.url}
+            width={fullScreenImage.fullscreenWidth} 
+            height={fullScreenImage.fullscreenHeight}  
+            alt={fullScreenImage.alt}  
             className="object-contain"
           />
         </div>

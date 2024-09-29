@@ -22,12 +22,12 @@ const contactListItems: ContactListItem[] = [
     rawURL: "https://linkedin.com/in/turhan-kim",
     anchorText: "LinkedIn Profile"
   },
-  {
+  /*{
     id: 3,
     label: "IEEE",
     rawURL: "https://ieeexplore.ieee.org/author/37089429839",
     anchorText: "IEEE Profile"
-  },
+  },*/
   {
     id: 4,
     label: "GitHub",
@@ -39,7 +39,7 @@ const contactListItems: ContactListItem[] = [
     label: "EyeEm",
     rawURL: "https://www.eyeem.com/u/turkimbro/photos",
     anchorText: "EyeEm Profile"
-  },
+  }
 ]
 
 type ContactListItemProps = {
