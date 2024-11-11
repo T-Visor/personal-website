@@ -1,5 +1,6 @@
-//'use client'
-import { Alert, AlertDescription } from "@/components/ui/alert"
+'use client'
+
+import { Mail, Linkedin, Github, Image } from "lucide-react"
 
 type ContactListItem = {
   id: number;
@@ -35,42 +36,43 @@ const contactListItems: ContactListItem[] = [
   }
 ]
 
-type ContactListItemProps = {
-  label: string;
-  rawURL: string;
-  anchorText: string;
-};
+const IconMap: { [key: string]: React.ReactNode } = {
+  "Email": <Mail className="h-5 w-5" />,
+  "LinkedIn": <Linkedin className="h-5 w-5" />,
+  "GitHub": <Github className="h-5 w-5" />,
+  "EyeEm": <Image className="h-5 w-5" />
+}
 
-const SectionCard: React.FC<ContactListItemProps> = ({ label, rawURL, anchorText }) => (
-  <p><strong>{label + ": "} </strong>
-    <a href={rawURL} target="_blank" className="text-indigo-400 hover:underline">
-      {anchorText}
-    </a>
-  </p>
-);
-
-const ContactPage: React.FC = () => (
-  <div className="space-y-6">
-    <h2 className="text-3xl font-bold">Contact Me</h2>
-    <div className="flex justify-left">
-      <div className="w-full sm:w-1/2 lg:w-1/2">
-        <Alert>
-          <AlertDescription>
-            <div className="text-lg space-y-2">
-              {contactListItems.map((contactListItem) =>
-                <SectionCard
-                  key={contactListItem.id}
-                  label={contactListItem.label}
-                  rawURL={contactListItem.rawURL}
-                  anchorText={contactListItem.anchorText}
-                />
-              )}
-            </div>
-          </AlertDescription>
-        </Alert>
-      </div>
+const ContactCard: React.FC<{ contactItem: ContactListItem }> = ({ contactItem }) => (
+  <div className="flex items-center gap-3">
+    <div className="flex-shrink-0">
+      {IconMap[contactItem.label]}
+    </div>
+    <div className="min-w-24">
+      <span className="text-lg font-semibold">{contactItem.label}</span>
+    </div>
+    <div>
+      <a 
+        href={contactItem.rawURL} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="text-lg text-indigo-400 hover:underline transition-opacity"
+      >
+        {contactItem.anchorText}
+      </a>
     </div>
   </div>
-)
+);
 
-export default ContactPage;
+export default function ContactPage() {
+  return (
+    <div className="space-y-6">
+      <h2 className="text-3xl font-bold">Contact Me</h2>
+      <div className="space-y-3">
+        {contactListItems.map((item) => (
+          <ContactCard key={item.id} contactItem={item} />
+        ))}
+      </div>
+    </div>
+  )
+}
