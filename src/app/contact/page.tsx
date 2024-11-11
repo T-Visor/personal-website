@@ -44,19 +44,21 @@ const IconMap: { [key: string]: React.ReactNode } = {
 }
 
 const ContactCard: React.FC<{ contactItem: ContactListItem }> = ({ contactItem }) => (
-  <div className="flex items-center gap-3">
-    <div className="flex-shrink-0">
-      {IconMap[contactItem.label]}
-    </div>
-    <div className="min-w-24">
-      <span className="text-lg font-semibold">{contactItem.label}</span>
+  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
+    <div className="flex items-center gap-3 sm:min-w-32">
+      <div className="flex-shrink-0">
+        {IconMap[contactItem.label]}
+      </div>
+      <div>
+        <span className="text-lg font-semibold">{contactItem.label}</span>
+      </div>
     </div>
     <div>
       <a 
         href={contactItem.rawURL} 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="text-lg text-indigo-400 hover:underline transition-opacity"
+        className="text-lg text-indigo-400 hover:underline transition-opacity break-all sm:break-normal"
       >
         {contactItem.anchorText}
       </a>
@@ -68,7 +70,7 @@ export default function ContactPage() {
   return (
     <div className="space-y-6">
       <h2 className="text-3xl font-bold">Contact Me</h2>
-      <div className="space-y-3">
+      <div className="space-y-4">
         {contactListItems.map((item) => (
           <ContactCard key={item.id} contactItem={item} />
         ))}
@@ -76,3 +78,4 @@ export default function ContactPage() {
     </div>
   )
 }
+
