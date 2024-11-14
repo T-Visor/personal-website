@@ -1,7 +1,7 @@
 "use client"
 
-import { useState, useRef } from 'react';
-import { CldImage } from 'next-cloudinary';
+import { useState, useRef } from "react";
+import { CldImage } from "next-cloudinary";
 
 type galleryImage = {
   id: number;
@@ -71,17 +71,19 @@ const images: galleryImage[] = [
 ]
 
 const PhotographyPage = () => {
-  const [fullScreenImage, setFullScreenImage] = useState<galleryImage | null>(null); // Store the full image object
+  const [fullScreenImage, setFullScreenImage] = useState<galleryImage | null>(null);
   const fullScreenRef = useRef<HTMLDivElement | null>(null);
 
+  // Enters fullscreen mode.
   const handleImageClick = (image: galleryImage) => {
-    setFullScreenImage(image); // Set the full image object
+    setFullScreenImage(image);
     if (fullScreenRef.current && fullScreenRef.current.requestFullscreen) {
       fullScreenRef.current.requestFullscreen();
     }
   };
 
-  const closeFullScreen = () => {
+  // Exits fullscreen mode.
+  const handleCloseButtonClick = () => {
     setFullScreenImage(null);
     if (document.fullscreenElement && document.exitFullscreen) {
       document.exitFullscreen();
@@ -94,7 +96,7 @@ const PhotographyPage = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {images.map((image) => (
           <div
-            key={image.id}  // Added key prop
+            key={image.id}
             className="aspect-square overflow-hidden rounded-lg cursor-pointer"
             onClick={() => handleImageClick(image)}
           >
@@ -119,7 +121,7 @@ const PhotographyPage = () => {
         >
           <button
             className="absolute top-4 right-4 p-2 text-white lg z-60"
-            onClick={closeFullScreen}
+            onClick={handleCloseButtonClick}
             aria-label="Close"
           >
             <span className="text-xl">X</span> {/* Use an "X" character */}

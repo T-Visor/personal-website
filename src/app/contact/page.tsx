@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { Mail, Linkedin, Github, Image } from "lucide-react"
 
