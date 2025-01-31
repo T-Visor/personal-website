@@ -29,7 +29,7 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
     <html lang="en">
       <body className="min-h-screen bg-gray-900 text-white overflow-auto">
         <div className="py-8 px-4 sm:py-16 sm:px-6 lg:px-8">
-          <div className="w-full max-w-4xl mx-auto sm:transform sm:scale-110 sm:origin-top">
+          <div className="w-full max-w-4xl mx-auto sm:transform sm:scale-90 sm:origin-top">
             <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
               <div className="p-6 sm:p-10">
                 <div className="flex flex-col sm:flex-row items-center mb-8">
@@ -49,7 +49,7 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
                   <ul className="grid grid-cols-2 gap-4 sm:flex sm:flex-row sm:space-x-4">
                     {[
                       { href: '/home', label: 'Home' },
-                      { href: '/ai', label: 'AI' },
+                      { href: '/ai', label: 'AI Projects' },
                       { href: '/photography', label: 'Photography' },
                       { href: '/contact', label: 'Contact' },
                     ].map((link) => (
