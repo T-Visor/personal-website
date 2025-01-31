@@ -1,6 +1,6 @@
 'use client';
 
-import { GitBranch, Code, Zap, GitMerge, Layers } from 'lucide-react';
+import { Code, Layers, Zap, GitBranch } from 'lucide-react';
 
 type Project = {
   id: number;
@@ -16,7 +16,7 @@ const projectsData: Project[] = [
     title: "OfflineChat (Company Proprietary)",
     description: "A large language model (LLM) powered capability satisfying multiple use-cases such as synthetic data generation, intelligent data parsing, fix generation for help desk support, and knowledge discovery engines.",
     url: "",
-    languages: ["Python", "JavaScript", "TensorFlow"], // Example languages
+    languages: ["Python", "TensorFlow"], // Example languages
   },
   {
     id: 2,
@@ -56,16 +56,16 @@ type ProjectCardProps = {
 };
 
 const languageIcons: { [key: string]: JSX.Element } = {
-  Python: <GitBranch size={30} className="text-yellow-500" />, // Using Lucide's Python icon
-  JavaScript: <Code size={30} className="text-yellow-400" />, // JavaScript icon (code)
-  TensorFlow: <Layers size={30} className="text-orange-500" />, // Placeholder for TensorFlow
-  PyTorch: <Zap size={30} className="text-red-500" />, // PyTorch icon
-  OpenCV: <GitMerge size={30} className="text-blue-600" />, // OpenCV icon
-  Keras: <GitBranch size={30} className="text-purple-500" />, // Keras icon
+  Python: <Code size={30} className="text-yellow-500" />,
+  JavaScript: <Code size={30} className="text-yellow-400" />,
+  TensorFlow: <Layers size={30} className="text-orange-500" />,
+  PyTorch: <Zap size={30} className="text-red-500" />,
+  OpenCV: <GitBranch size={30} className="text-blue-600" />,
+  Keras: <GitBranch size={30} className="text-purple-500" />,
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, url, languages }) => (
-  <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+  <div className="bg-gray-800 rounded-lg">
     <h3 className="text-2xl font-semibold mb-3 text-white">{title}</h3>
     <p className="text-lg text-gray-300 mb-4">{description}</p>
     {languages.length > 0 && (
@@ -82,9 +82,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, url, lang
 );
 
 const AIProjectsPage: React.FC = () => (
-  <div className="space-y-8">
-    <h2 className="text-3xl font-bold text-white mb-8">AI Projects</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="space-y-6">
+    <h2 className="text-3xl font-bold text-white">AI Projects</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {projectsData.map((project) => (
         <ProjectCard
           key={project.id}
