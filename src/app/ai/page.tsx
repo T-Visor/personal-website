@@ -13,22 +13,22 @@ type Project = {
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "OfflineChat (Company Proprietary)",
-    description: "A large language model (LLM) powered capability satisfying multiple use-cases such as synthetic data generation, intelligent data parsing, fix generation for help desk support, and knowledge discovery engines.",
+    title: "TacticalGPT (Company Proprietary)",
+    description: "A large language model (LLM) powered platform prototyped to demonstrate use-cases such as synthetic data generation, intelligent data parsing, automated metadata tagging, help desk support, and knowledge discovery engines.",
     url: "",
     languages: ["Python", "TensorFlow"], // Example languages
   },
   {
     id: 2,
     title: "Restorations as Denoising",
-    description: "Evaluated the use of generative adversarial networks (GANs) to detect perturbed face images generated to fool face recognition systems.",
+    description: "Evaluated the use of generative adversarial networks (GANs) to remove adversarial noise in face images designed to deceive face recognition systems.",
     url: "https://ieeexplore.ieee.org/document/10197680",
     languages: ["Python", "PyTorch"],
   },
   {
     id: 3,
     title: "Transformations as Denoising",
-    description: "Evaluated the use of simple image transformation techniques to detect perturbed face images generated to fool face recognition systems.",
+    description: "Evaluated the use of simple image transformation techniques to remove adversarial noise in face images designed to deceive face recognition systems.",
     url: "https://ieeexplore.ieee.org/document/9925338",
     languages: ["Python", "OpenCV"],
   },
