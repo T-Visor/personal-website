@@ -1,6 +1,6 @@
 "use client"
 
-import { Code, Github, Brain, GraduationCap, Camera, Server } from 'lucide-react';
+import { Code, Brain, GraduationCap, Server } from 'lucide-react';
 
 const HomePage: React.FC = () => (
   <div className="space-y-6">
