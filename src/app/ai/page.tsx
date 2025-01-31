@@ -13,7 +13,7 @@ type Project = {
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "TacticalGPT (Company Proprietary)",
+    title: "Knowledge Advisor (Company Proprietary)",
     description: "A large language model (LLM) powered platform prototyped to demonstrate use-cases such as synthetic data generation, intelligent data parsing, automated metadata tagging, help desk support, and knowledge discovery engines.",
     url: "",
     languages: ["Python", "TensorFlow"], // Example languages
@@ -83,7 +83,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, url, lang
 
 const AIProjectsPage: React.FC = () => (
   <div className="space-y-6">
-    <h2 className="text-3xl font-bold text-white">AI Projects</h2>
+    <h2 className="text-3xl font-bold text-white">Software Projects</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {projectsData.map((project) => (
         <ProjectCard

@@ -42,14 +42,14 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
                   />
                   <div className="sm:ml-5 text-center sm:text-left">
                     <div className="text-2xl font-bold text-white">Turhan Kimbrough</div>
-                    <p className="text-xl text-gray-300">AI Engineer & Photographer</p>
+                    <p className="text-xl text-gray-300">Software Engineer & Photographer</p>
                   </div>
                 </div>
                 <nav className="mb-8">
                   <ul className="grid grid-cols-2 gap-4 sm:flex sm:flex-row sm:space-x-4">
                     {[
                       { href: '/home', label: 'Home' },
-                      { href: '/ai', label: 'AI Projects' },
+                      { href: '/ai', label: 'Projects' },
                       { href: '/photography', label: 'Photography' },
                       { href: '/contact', label: 'Contact' },
                     ].map((link) => (
