@@ -56,12 +56,12 @@ type ProjectCardProps = {
 };
 
 const languageIcons: { [key: string]: JSX.Element } = {
-  Python: <Code size={30} className="text-yellow-500" />,
-  JavaScript: <Code size={30} className="text-yellow-400" />,
-  TensorFlow: <Layers size={30} className="text-orange-500" />,
-  PyTorch: <Zap size={30} className="text-red-500" />,
-  OpenCV: <GitBranch size={30} className="text-blue-600" />,
-  Keras: <GitBranch size={30} className="text-purple-500" />,
+  Python: <Code size={25} className="text-yellow-500" />,
+  JavaScript: <Code size={25} className="text-yellow-400" />,
+  TensorFlow: <Layers size={25} className="text-orange-500" />,
+  PyTorch: <Zap size={25} className="text-red-500" />,
+  OpenCV: <GitBranch size={25} className="text-blue-600" />,
+  Keras: <GitBranch size={25} className="text-purple-500" />,
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, url, languages }) => (

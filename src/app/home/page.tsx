@@ -16,23 +16,23 @@ const HomePage: React.FC = () => (
     </p>
 
     <div className="mt-8"> {/* Add margin-bottom here */}
-      <h3 className="text-2xl font-semibold mb-6">Background</h3>
+      <h3 className="text-2xl font-semibold mb-6">Education & Skills</h3>
       
-      <ul className="list-none space-y-6 sm:space-y-4 md:space-y-3">
+      <ul className="text-lg list-none space-y-6 sm:space-y-4 md:space-y-3">
         <li className="flex items-center space-x-3 md:space-x-4">
-          <GraduationCap size={20} className="text-green-500" />
-          <span className="text-base sm:text-lg">M.S/B.S in Computer Science (Cybersecurity Subdiscipline)</span>
+          <GraduationCap size={25} className="text-green-500" />
+          <span className="text-base sm:text-lg">M.S/B.S Computer Science</span>
         </li>
         <li className="flex items-center space-x-3 md:space-x-4">
-          <Code size={20} className="text-blue-500" />
+          <Code size={25} className="text-blue-500" />
           <span className="text-base sm:text-lg">Python, BASH, JavaScript, C/C++, Java</span>
         </li>
         <li className="flex items-center space-x-3 md:space-x-4">
-          <Brain size={20} className="text-red-500" />
+          <Brain size={25} className="text-red-500" />
           <span className="text-base sm:text-lg">Haystack - Deepset, LangChain, TensorFlow, PyTorch</span>
         </li>
         <li className="flex items-center space-x-3 md:space-x-4">
-          <Server size={20} className="text-yellow-500" />
+          <Server size={25} className="text-yellow-500" />
           <span className="text-base sm:text-lg">React/Next.js, FastAPI, Tailwind CSS, Shadcn UI</span>
         </li>
       </ul>
