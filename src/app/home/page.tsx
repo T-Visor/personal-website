@@ -7,8 +7,7 @@ const HomePage: React.FC = () => (
     <h2 className="text-3xl font-bold">Overview</h2>
     
     <p className="text-lg">
-      I am a Software developer who is passionate about artificial intelligence (AI), with experience in computer vision and natural language processing (NLP). 
-      I specialize in building intelligent systems using convolutional neural networks (CNNs) and large language models (LLMs) to solve real-world problems.
+      I am a software engineer who is passionate about artificial intelligence (AI), with experience in computer vision and natural language processing (NLP). 
     </p>
     
     <p className="text-lg">
