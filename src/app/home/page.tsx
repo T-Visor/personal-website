@@ -14,25 +14,25 @@ const HomePage: React.FC = () => (
       Outside of tech, I am a part-time photographer, capturing moments of creativity.
     </p>
 
-    <div className="mt-8"> {/* Add margin-bottom here */}
+    <div className="mt-8">
       <h3 className="text-2xl font-semibold mb-6">Education & Skills</h3>
       
-      <ul className="text-lg list-none space-y-6 sm:space-y-4 md:space-y-3">
-        <li className="flex items-center space-x-3 md:space-x-4">
-          <GraduationCap size={25} className="text-green-500" />
-          <span className="text-base sm:text-lg">M.S/B.S Computer Science</span>
+      <ul className="text-lg list-none space-y-4">
+        <li className="flex items-start sm:items-center gap-3">
+          <GraduationCap size={25} className="text-green-500 flex-shrink-0 mt-0.5 sm:mt-0" />
+          <span className="text-base text-lg">M.S/B.S Computer Science</span>
         </li>
-        <li className="flex items-center space-x-3 md:space-x-4">
-          <Code size={25} className="text-blue-500" />
-          <span className="text-base sm:text-lg">Python, BASH, JavaScript, C/C++, Java</span>
+        <li className="flex items-start sm:items-center gap-3">
+          <Code size={25} className="text-blue-500 flex-shrink-0 mt-0.5 sm:mt-0" />
+          <span className="text-base text-lg">Python, BASH, JavaScript, C/C++, Java</span>
         </li>
-        <li className="flex items-center space-x-3 md:space-x-4">
-          <Brain size={25} className="text-red-500" />
-          <span className="text-base sm:text-lg">Haystack - Deepset, LangChain, TensorFlow, PyTorch</span>
+        <li className="flex items-start sm:items-center gap-3">
+          <Brain size={25} className="text-red-500 flex-shrink-0 mt-0.5 sm:mt-0" />
+          <span className="text-base text-lg">Haystack - Deepset, LangChain, TensorFlow, PyTorch</span>
         </li>
-        <li className="flex items-center space-x-3 md:space-x-4">
-          <Server size={25} className="text-yellow-500" />
-          <span className="text-base sm:text-lg">React/Next.js, FastAPI, Tailwind CSS, Shadcn UI</span>
+        <li className="flex items-start sm:items-center gap-3">
+          <Server size={25} className="text-yellow-500 flex-shrink-0 mt-0.5 sm:mt-0" />
+          <span className="text-base text-lg">React/Next.js, FastAPI, Tailwind CSS, Shadcn UI</span>
         </li>
       </ul>
     </div>
