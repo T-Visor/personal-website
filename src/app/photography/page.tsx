@@ -17,10 +17,10 @@ const images: galleryImage[] = [
   {
     id: 1,
     url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727647259/bridge-view-min_lgvapr.jpg",
-    height: 500,
-    width: 500,
-    fullscreenHeight: 500,
-    fullscreenWidth: 500,
+    height: 400,
+    width: 400,
+    fullscreenHeight: 400,
+    fullscreenWidth: 400,
     alt: "Image with sky in background."
   },
   {
@@ -44,10 +44,10 @@ const images: galleryImage[] = [
   {
     id: 4,
     url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1739415452/Big-face_dxe7ah.jpg",
-    height: 500,
-    width: 500,
-    fullscreenHeight: 800,
-    fullscreenWidth: 800,
+    height: 400,
+    width: 400,
+    fullscreenHeight: 400,
+    fullscreenWidth: 400,
     alt: "Image with sky in background."
   },
   {
@@ -62,10 +62,10 @@ const images: galleryImage[] = [
   {
     id: 6,
     url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1739415458/Leaves_n3g0gm.jpg",
-    height: 500,
-    width: 500,
-    fullscreenHeight: 500,
-    fullscreenWidth: 500,
+    height: 400,
+    width: 400,
+    fullscreenHeight: 400,
+    fullscreenWidth: 400,
     alt: "Image with sky in background."
   },
 ]
