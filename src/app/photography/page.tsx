@@ -43,7 +43,7 @@ const images: galleryImage[] = [
   },
   {
     id: 4,
-    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646360/IMG_1148_yaegg8.jpg",
+    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1739415452/Big-face_dxe7ah.jpg",
     height: 500,
     width: 500,
     fullscreenHeight: 800,
@@ -61,7 +61,7 @@ const images: galleryImage[] = [
   },
   {
     id: 6,
-    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/C6015A3C-9653-4BEA-96C6-7E93327A9209_jitmqp.jpg",
+    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1739415458/Leaves_n3g0gm.jpg",
     height: 500,
     width: 500,
     fullscreenHeight: 500,
