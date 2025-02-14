@@ -1,17 +1,18 @@
 'use client';
-
 import { useEffect, useState, ReactNode } from 'react';
 import Image from 'next/image';
 import '@/app/globals.css';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Menu } from 'lucide-react';
 
 type ClientLayoutProps = {
-  children: ReactNode; // Explicitly type the children prop
+  children: ReactNode;
 };
 
 export default function ClientLayout({ children }: ClientLayoutProps) {
   const [currentPath, setCurrentPath] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const clientPathname = usePathname();
 
   useEffect(() => {
@@ -25,10 +26,77 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
     return currentPath.startsWith(href);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <html lang="en">
-      <body className="min-h-screen bg-gray-900 text-white overflow-auto">
-        <div className="py-8 px-4 sm:py-16 sm:px-6 lg:px-8">
+      <body className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
+        <header className="fixed top-0 left-0 right-0 bg-gray-800 shadow-lg z-50">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="flex items-center justify-between h-16">
+              {/* Desktop Navigation */}
+              <nav className="hidden sm:block">
+                <ul className="flex space-x-4">
+                  {[
+                    { href: '/home', label: 'Home' },
+                    { href: '/ai', label: 'Projects' },
+                    { href: '/photography', label: 'Photography' },
+                    { href: '/contact', label: 'Contact' },
+                  ].map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href}>
+                        <span
+                          className={`${
+                            isActive(link.href) ? 'bg-indigo-600 text-white' : 'text-indigo-400'
+                          } hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium`}
+                        >
+                          {link.label}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+
+              {/* Mobile Menu Button */}
+              <button
+                className="sm:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700"
+                onClick={toggleMenu}
+              >
+                <Menu size={24} />
+              </button>
+            </div>
+
+            {/* Mobile Navigation */}
+            <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
+              <ul className="px-2 pt-2 pb-3 space-y-1">
+                {[
+                  { href: '/home', label: 'Home' },
+                  { href: '/ai', label: 'Projects' },
+                  { href: '/photography', label: 'Photography' },
+                  { href: '/contact', label: 'Contact' },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href}>
+                      <span
+                        className={`${
+                          isActive(link.href) ? 'bg-indigo-600 text-white' : 'text-indigo-400'
+                        } hover:bg-indigo-700 block px-3 py-2 rounded-md text-base font-medium`}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {link.label}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <main className="pt-20 px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-4xl mx-auto sm:transform sm:scale-90 sm:origin-top">
             <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
               <div className="p-6 sm:p-10">
@@ -45,33 +113,11 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
                     <p className="text-xl text-gray-300">Software Engineer & Photographer</p>
                   </div>
                 </div>
-                <nav className="mb-8">
-                  <ul className="grid grid-cols-2 gap-4 sm:flex sm:flex-row sm:space-x-4">
-                    {[
-                      { href: '/home', label: 'Home' },
-                      { href: '/ai', label: 'Projects' },
-                      { href: '/photography', label: 'Photography' },
-                      { href: '/contact', label: 'Contact' },
-                    ].map((link) => (
-                      <li key={link.href}>
-                        <Link href={link.href}>
-                          <span
-                            className={`${
-                              isActive(link.href) ? 'bg-indigo-600 text-white' : 'text-indigo-400'
-                            } hover:bg-indigo-700 px-3 py-2 rounded-md text-lg font-medium`}
-                          >
-                            {link.label}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
                 <div>{children}</div>
               </div>
             </div>
           </div>
-        </div>
+        </main>
       </body>
     </html>
   );
