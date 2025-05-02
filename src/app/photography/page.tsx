@@ -1,13 +1,9 @@
 "use client"
 
-import { useState, useRef } from "react";
 import { CldImage } from "next-cloudinary";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
 
