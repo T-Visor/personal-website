@@ -24,11 +24,11 @@ const HomePage: React.FC = () => (
         </li>
         <li className="flex items-start sm:items-center gap-3">
           <Code size={25} className="text-blue-500 flex-shrink-0 mt-0.5 sm:mt-0" />
-          <span className="text-base text-lg">Python, BASH, JavaScript, C/C++, Java</span>
+          <span className="text-base text-lg">Python, JavaScript, C/C++, Java, Git</span>
         </li>
         <li className="flex items-start sm:items-center gap-3">
           <Brain size={25} className="text-red-500 flex-shrink-0 mt-0.5 sm:mt-0" />
-          <span className="text-base text-lg">Haystack - Deepset, LangChain, TensorFlow, PyTorch</span>
+          <span className="text-base text-lg">Ollama, HuggingFace Transformers, Haystack, LangChain, TensorFlow, PyTorch</span>
         </li>
         <li className="flex items-start sm:items-center gap-3">
           <Server size={25} className="text-yellow-500 flex-shrink-0 mt-0.5 sm:mt-0" />
