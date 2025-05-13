@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Linkedin, Github, Image } from "lucide-react"
+import { Mail, Linkedin, Github, Camera } from "lucide-react"
 
 type ContactListItem = {
   id: number;
@@ -40,7 +40,7 @@ const IconMap: { [key: string]: React.ReactNode } = {
   "Email": <Mail className="h-5 w-5" />,
   "LinkedIn": <Linkedin className="h-5 w-5" />,
   "GitHub": <Github className="h-5 w-5" />,
-  "EyeEm": <Image className="h-5 w-5" />
+  "EyeEm": <Camera className="h-5 w-5" />
 }
 
 const ContactCard: React.FC<{ contactItem: ContactListItem }> = ({ contactItem }) => (
