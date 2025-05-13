@@ -19,6 +19,33 @@ type galleryImage = {
 
 const images: galleryImage[] = [
   {
+    id: -2,
+    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1747101844/IMG_2612_ihcist.jpg",
+    height: 400,
+    width: 400,
+    fullscreenHeight: 4000,
+    fullscreenWidth: 6000,
+    alt: "Image with sky in background."
+  },
+  {
+    id: -1,
+    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1747101834/IMG_2611_hw1kww.jpg",
+    height: 400,
+    width: 400,
+    fullscreenHeight: 4000,
+    fullscreenWidth: 6000,
+    alt: "Image with sky in background."
+  },
+  {
+    id: 0,
+    url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1747101832/IMG_2616_f2tiow.jpg",
+    height: 400,
+    width: 400,
+    fullscreenHeight: 6000,
+    fullscreenWidth: 4000,
+    alt: "Image with sky in background."
+  },
+  {
     id: 1,
     url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727647259/bridge-view-min_lgvapr.jpg",
     height: 400,
