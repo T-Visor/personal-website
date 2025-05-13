@@ -23,8 +23,8 @@ const images: galleryImage[] = [
     url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727647259/bridge-view-min_lgvapr.jpg",
     height: 400,
     width: 400,
-    fullscreenHeight: 400,
-    fullscreenWidth: 400,
+    fullscreenHeight: 5519,
+    fullscreenWidth: 3940,
     alt: "Image with sky in background."
   },
   {
@@ -32,8 +32,8 @@ const images: galleryImage[] = [
     url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/8FEFF362-BA95-4BBB-80C9-5CDC6DCC254D_mcqet9.jpg",
     height: 500,
     width: 500,
-    fullscreenHeight: 800,
-    fullscreenWidth: 800,
+    fullscreenHeight: 2730,
+    fullscreenWidth: 4096,
     alt: "Image with sky in background."
   },
   {
@@ -41,8 +41,8 @@ const images: galleryImage[] = [
     url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/IMG_0781_bnry3a.jpg",
     height: 500,
     width: 500,
-    fullscreenHeight: 800,
-    fullscreenWidth: 800,
+    fullscreenHeight: 3664,
+    fullscreenWidth: 5488,
     alt: "Image with sky in background."
   },
   {
@@ -50,8 +50,8 @@ const images: galleryImage[] = [
     url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1739415452/Big-face_dxe7ah.jpg",
     height: 400,
     width: 400,
-    fullscreenHeight: 400,
-    fullscreenWidth: 400,
+    fullscreenHeight: 4065,
+    fullscreenWidth: 2894,
     alt: "Image with sky in background."
   },
   {
@@ -59,8 +59,8 @@ const images: galleryImage[] = [
     url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1727646361/cabin-view_qumj6w.jpg",
     height: 500,
     width: 500,
-    fullscreenHeight: 800,
-    fullscreenWidth: 800,
+    fullscreenHeight: 4012,
+    fullscreenWidth: 6018,
     alt: "Image with sky in background."
   },
   {
@@ -68,8 +68,8 @@ const images: galleryImage[] = [
     url: "https://res.cloudinary.com/dfiwecvfd/image/upload/v1739415458/Leaves_n3g0gm.jpg",
     height: 400,
     width: 400,
-    fullscreenHeight: 400,
-    fullscreenWidth: 400,
+    fullscreenHeight: 3692,
+    fullscreenWidth: 2832,
     alt: "Image with sky in background."
   },
 ]
@@ -94,7 +94,7 @@ const PhotographyPage = () => {
                 />
               </div>
             </DialogTrigger>
-            <DialogContent className="border-0">
+            {/*<DialogContent className="border-0 max-w-2xl">
               <CldImage
                 src={image.url}
                 className="w-full h-full"
@@ -104,7 +104,19 @@ const PhotographyPage = () => {
                 gravity="center"
                 alt={image.alt}
               />
+            </DialogContent> */}
+            <DialogContent className="border-0 max-w-5xl w-full max-h-[90vh] overflow-auto p-4 flex items-center justify-center">
+              <CldImage
+                src={image.url}
+                className="max-h-[80vh] max-w-full object-contain"
+                height={image.fullscreenHeight}
+                width={image.fullscreenWidth}
+                crop="fill"
+                gravity="center"
+                alt={image.alt}
+              />
             </DialogContent>
+
           </Dialog>
         ))}
       </div>

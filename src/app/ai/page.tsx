@@ -12,6 +12,13 @@ type Project = {
 
 const projectsData: Project[] = [
   {
+    id: 0,
+    title: "Natural Language Housing Search",
+    description: "A Zillow-style hobby project that leverages generative AI to power natural language search, enabling users to explore homes for sale through a seamless, intuitive interface.",
+    url: "https://github.com/T-Visor/natural-language-housing-search",
+    languages: ["JavaScript", "TensorFlow"], // Example languages
+  },
+  {
     id: 1,
     title: "Knowledge Advisor (Company Proprietary)",
     description: "A large language model (LLM) powered platform prototyped to demonstrate use-cases such as synthetic data generation, intelligent data parsing, automated metadata tagging, help desk support, and knowledge discovery engines.",
