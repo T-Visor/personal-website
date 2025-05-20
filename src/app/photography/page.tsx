@@ -105,7 +105,7 @@ const PhotographyPage = () => {
   return (
     <div className="space-y-6">
       <h2 className="text-3xl font-bold">Photo Highlights</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3">        
         {images.map((image) => (
           <Dialog key={image.id}>
             <DialogTrigger asChild>
